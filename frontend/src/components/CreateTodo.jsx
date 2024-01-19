@@ -9,7 +9,7 @@ const CreateTodo = () => {
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify({ title, description }),
+      body: JSON.stringify({ title:title, description:description }),
     });
 
     if (response.ok) {
@@ -55,6 +55,8 @@ const CreateTodo = () => {
         >
           Add to Todo
         </button>
+        <p>Title: {title}</p>
+        <p>Description: {description}</p>
       </div>
     </>
   );
